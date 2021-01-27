@@ -1,0 +1,17 @@
+ LISTA DE COMANDOS SEQUELIZE PARA GENERAR MODELOS DE BD GYM AO
+ 
+ 
+ sequelize-cli model:generate --name cliente --attributes nombre:string,apellido:string,email:string,telefono:string,activo:boolean
+ 
+ sequelize-cli model:generate --name instructor --attributes nombre:string,apellido:string,email:string,telefono:string,activo:boolean
+ 
+ sequelize-cli model:generate --name membresia --attributes tipo:string,precio:string,duracion:string,activo:boolean
+ 
+ sequelize-cli model:generate --name clase --attributes nombreClase:string,cupos:integer,id_instructor:integer,activo:boolean
+ 
+ sequelize-cli model:generate --name pago --attributes id_cliente:Integer,id_membresia:Integer,valorPagar:Money,fechaPago:Date
+ 
+ sequelize-cli model:generate --name dispo_clase --attributes id_clase:Integer,dia_sem:Stringr,fecha:Date,hora_ini:Time,hora_fin:time
+ 
+ sequelize-cli model:generate --name cliente_clase --attributes id_cliente:Integer,id_dispo_clase:integer
+ 
