@@ -9,10 +9,20 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       id_cliente: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        
+        references: {
+          model: 'clientes',
+          key: 'id'
+        }
       },
       id_membresia: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        
+        references: {
+          model: 'membresia',
+          key: 'id'
+        }
       },
       valorPagar: {
         type: Sequelize.INTEGER

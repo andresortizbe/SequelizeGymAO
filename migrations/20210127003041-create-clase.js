@@ -15,7 +15,11 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       id_instructor: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'instructors',
+          key: 'id'
+        }
       },
       activo: {
         type: Sequelize.BOOLEAN
